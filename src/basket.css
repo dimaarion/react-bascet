@@ -1,0 +1,16 @@
+#basket {
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+#basket .counter {
+  background-color: red;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  margin: auto;
+  right: 0px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 7pt;
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "names": "Товар 1",
+    "price": 0,
+    "counter": 1
+  },
+  {
+    "id": 2,
+    "names": "Товар 2",
+    "price": 0,
+    "counter": 1
+  },
+  {
+    "id": 3,
+    "names": "Товар 3",
+    "price": 0,
+    "counter": 1
+  }
+]

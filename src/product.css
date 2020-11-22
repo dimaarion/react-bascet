@@ -1,0 +1,13 @@
+#product button {
+  width: 35px;
+  cursor: pointer;
+  font-size: 12pt;
+}
+#product .num svg {
+  float: left;
+}
+#product .num div {
+  float: left;
+  width: 50px;
+  text-align: center;
+}
