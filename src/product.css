@@ -1,13 +1,32 @@
+#product {
+  width: 100%;
+  text-align: center;
+}
 #product button {
-  width: 35px;
   cursor: pointer;
   font-size: 12pt;
+  width: auto;
+  border: none;
+  background-color: #ffffff;
 }
 #product .num svg {
-  float: left;
+  font-size: 20pt;
 }
 #product .num div {
-  float: left;
-  width: 50px;
   text-align: center;
+  font-size: 12pt;
+}
+#product .num {
+  position: relative;
+}
+#product .num table {
+  position: absolute;
+  margin: auto;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+#product tr {
+  height: 40px;
 }
