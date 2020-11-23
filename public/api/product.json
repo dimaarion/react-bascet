@@ -2,19 +2,22 @@
   {
     "id": 1,
     "names": "Товар 1",
-    "price": 0,
-    "counter": 1
+    "price": 1500,
+    "counter": 1,
+    "summ": 0
   },
   {
     "id": 2,
     "names": "Товар 2",
-    "price": 0,
-    "counter": 1
+    "price": 800,
+    "counter": 1,
+    "summ": 0
   },
   {
     "id": 3,
     "names": "Товар 3",
-    "price": 0,
-    "counter": 1
+    "price": 2854,
+    "counter": 1,
+    "summ": 0
   }
 ]

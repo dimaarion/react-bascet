@@ -9,6 +9,7 @@ import "./product.css";
 
 export default function App() {
   const [product, setProduct] = useState([{}]);
+  const [display, setDisplay] = useState(false);
   const [plus, setPlus] = useState(0);
   useEffect(() => {
     axios
@@ -18,8 +19,12 @@ export default function App() {
 
   return (
     <Col className="App">
-      <ButtonBasket len={product.length} />
-      <ProductBasket product={product} setPlus={setPlus} plus={plus} />
+      <ButtonBasket len={product.length} setDisplay={setDisplay} />
+      {display === true ? (
+        <ProductBasket product={product} setPlus={setPlus} plus={plus} />
+      ) : (
+        ""
+      )}
     </Col>
   );
 }
