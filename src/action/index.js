@@ -1,6 +1,7 @@
-export function counter(p, state = [{}], type) {
+export function counter(p, state = [{}], type, arraySumm) {
   let summ = document.getElementsByClassName("summ");
   let counter = document.getElementsByClassName("productCounter");
+
   switch (type) {
     case "PLUS":
       let plus = Array.from(counter)
@@ -9,6 +10,7 @@ export function counter(p, state = [{}], type) {
       Array.from(summ)
         .filter((f, i) => p.id === i + 1)
         .map((x) => (x.innerHTML = p.price * Number.parseInt(plus[0], 0)));
+      arraySumm();
       return plus;
     case "MINUS":
       let minus = Array.from(counter)
@@ -17,8 +19,16 @@ export function counter(p, state = [{}], type) {
       Array.from(summ)
         .filter((f, i) => p.id === i + 1)
         .map((x) => (x.innerHTML = p.price * Number.parseInt(minus[0], 0)));
+      arraySumm();
       return minus;
     default:
       return state;
   }
+}
+export function arraySumm() {
+  let rezult = document.getElementsByClassName("rezult");
+  let s = document.getElementsByClassName("summ");
+  let sum = 0;
+  Array.from(s).map((x) => (sum += Number.parseInt(x.innerHTML, 0)));
+  Array.from(rezult).map((x) => (x.innerHTML = "Итого: " + sum));
 }

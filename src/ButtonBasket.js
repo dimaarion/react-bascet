@@ -1,8 +1,15 @@
 import React from "react";
-
+import { arraySumm } from "./action";
 export default function ButtonBasket(props) {
   return (
-    <button id="basket" type="button" onClick={() => props.setDisplay(true)}>
+    <button
+      id="basket"
+      type="button"
+      onClick={() => {
+        props.setDisplay(true);
+        arraySumm();
+      }}
+    >
       <div className="counter">{props.len}</div>
       <svg
         width="2em"

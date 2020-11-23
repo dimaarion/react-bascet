@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "bootstrap-4-react";
-import { counter } from "./action";
+import { counter, arraySumm } from "./action";
 export default function ProductBasket(props) {
   return (
     <Container>
@@ -29,7 +29,7 @@ export default function ProductBasket(props) {
                         <button
                           type="button"
                           onClick={(e) => {
-                            counter(p, props.product, "MINUS");
+                            counter(p, props.product, "MINUS", arraySumm);
                           }}
                         >
                           <svg
@@ -53,7 +53,7 @@ export default function ProductBasket(props) {
                         <button
                           type="button"
                           onClick={(e) => {
-                            counter(p, props.product, "PLUS");
+                            counter(p, props.product, "PLUS", arraySumm);
                           }}
                         >
                           <svg
@@ -92,7 +92,7 @@ export default function ProductBasket(props) {
             </tr>
           ))}
           <tr>
-            <td>Итого:</td>
+            <td className="rezult">Итого:</td>
           </tr>
         </tbody>
       </table>
