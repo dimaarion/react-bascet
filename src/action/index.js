@@ -25,10 +25,17 @@ export function counter(p, state = [{}], type, arraySumm) {
       return state;
   }
 }
+
 export function arraySumm() {
   let rezult = document.getElementsByClassName("rezult");
   let s = document.getElementsByClassName("summ");
   let sum = 0;
   Array.from(s).map((x) => (sum += Number.parseInt(x.innerHTML, 0)));
   Array.from(rezult).map((x) => (x.innerHTML = "Итого: " + sum));
+}
+
+export function sessions(j) {
+  // let dg = JSON.stringify(j);
+  // localStorage.setItem("producttions", dg);
+  return JSON.parse(localStorage.getItem("producttions"));
 }
