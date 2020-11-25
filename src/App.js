@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ButtonBasket from "./ButtonBasket";
 import ProductBasket from "./ProductBasket";
+import Err from "./Err";
 import { Col } from "bootstrap-4-react";
 import "./styles.css";
 import "./basket.css";
@@ -25,7 +26,15 @@ export default function App() {
   return (
     <Col className="App">
       <ButtonBasket len={product.length} setDisplay={setDisplay} />
-      {display === true ? <ProductBasket product={sessions(product)} /> : ""}
+      {display === true ? (
+        Array.isArray(sessions(product).length > 0) ? (
+          <ProductBasket product={sessions(product)} />
+        ) : (
+          <Err setDisplay={setDisplay} />
+        )
+      ) : (
+        ""
+      )}
     </Col>
   );
 }
