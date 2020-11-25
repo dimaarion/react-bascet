@@ -37,5 +37,10 @@ export function arraySumm() {
 export function sessions(j) {
   // let dg = JSON.stringify(j);
   // localStorage.setItem("producttions", dg);
-  return JSON.parse(localStorage.getItem("producttions"));
+  let productions = JSON.parse(localStorage.getItem("producttions"));
+  if (Array.isArray(productions)) {
+    return productions;
+  } else {
+    return [{}];
+  }
 }
